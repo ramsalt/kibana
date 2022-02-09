@@ -9,11 +9,3 @@ xpack.reporting.kibanaServer.hostname: 0.0.0.0
 {{ if (getenv "CA_PATH") }}
 elasticsearch.ssl.certificateAuthorities: "{{ getenv "CA_PATH" }}"
 {{ end }}
-
-xpack.security.authc.providers:
-  oidc.oidc1:
-    order: 0
-    realm: oidc1
-    description: "Log in with Google"
-  basic.basic1:
-    order: 1
