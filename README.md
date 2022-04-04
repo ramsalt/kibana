@@ -1,2 +1,2 @@
 # kibana
-Custom elasticsearch docker image with Google OIDC configuration
+Custom kibana docker image with Google OIDC configuration
