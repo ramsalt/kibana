@@ -3,7 +3,7 @@ ARG WODBY_KIBANA_VERSION=7-5.18.3
 FROM wodby/kibana:${WODBY_KIBANA_VERSION}
 
 ARG KIBANA_VERSION=7.17.5
-ARG ENHANCED_TABLE_VERSION=1.13.1
+ARG ENHANCED_TABLE_VERSION=1.13.2
 
 RUN sed -i -E 's/(test -x "\$NODE"$)/\1 || NODE=$(which node)/' /usr/share/kibana/bin/kibana-plugin; \
     /usr/share/kibana/bin/kibana-plugin install https://github.com/fbaligand/kibana-enhanced-table/releases/download/v${ENHANCED_TABLE_VERSION}/enhanced-table-${ENHANCED_TABLE_VERSION}_${KIBANA_VERSION}.zip
