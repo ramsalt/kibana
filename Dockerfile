@@ -1,8 +1,8 @@
-ARG WODBY_KIBANA_VERSION=7-5.18.3
+ARG WODBY_KIBANA_VERSION=7-5.18.4
 
 FROM wodby/kibana:${WODBY_KIBANA_VERSION}
 
-ARG KIBANA_VERSION=7.17.5
+ARG KIBANA_VERSION=7.17.6
 ARG ENHANCED_TABLE_VERSION=1.13.2
 
 RUN sed -i -E 's/(test -x "\$NODE"$)/\1 || NODE=$(which node)/' /usr/share/kibana/bin/kibana-plugin; \
